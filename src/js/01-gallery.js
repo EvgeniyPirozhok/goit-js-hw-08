@@ -24,29 +24,8 @@ function createGalleryCardsMarkup (galleryItems) {
     `;
     }).join('');
 };
-galleryContainer.addEventListener('click', onGalleryContainerClick)
 
-function onGalleryContainerClick (evt) {
-    evt.preventDefault();
-    const isGallerySwatchEl = evt.target.dataset.source;
-        if (!isGallerySwatchEl) {
-            return
-        }
-        const lightBox = basicLightbox.create(`
-    		<img  src="${isGallerySwatchEl}">
-    	`);
-        lightBox.show();
-        
-        this.addEventListener("keydown", onPresEscape);
-        function onPresEscape(evt) {
-            if (evt.key !== "Escape") {
-                return
-            }
-            lightBox.close();
-            this.removeEventListener("keydown", onPresEscape);
-        }
-}
-let gallery = new SimpleLightbox('.gallery__link', { captionsData: 'alt', captionDelay: 25, });
+let galleryItems = new SimpleLightbox('.gallery__link', { captionsData: 'alt', captionDelay: 25, });
 
 
 

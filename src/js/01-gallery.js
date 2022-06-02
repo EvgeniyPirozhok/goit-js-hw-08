@@ -25,7 +25,6 @@ function createGalleryCardsMarkup (galleryItems) {
     }).join('');
 };
 
-let galleryItems = new SimpleLightbox('.gallery__link', { captionsData: 'alt', captionDelay: 25, });
-
+let gallery = new SimpleLightbox('.gallery__link', { captionsData: 'alt', captionDelay: 25, });
 
 
